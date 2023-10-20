@@ -4,8 +4,7 @@ This is a React Vite application that demonstrates how to fetch and display coun
 
 ## Features
 
-- Fetch country data (name, population, languages, etc.) from the Restcountries API.
+- Fetch country data (name, flag) from the Restcountries API.
 - Allow users to log in and access protected routes using Auth0.
-- Display a list of countries and their details.
-- View country details and statistics.
+- Display a list of countries and their flags.
 - Securely authenticate users with Auth0.
