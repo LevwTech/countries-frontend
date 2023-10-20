@@ -3,13 +3,8 @@ import './App.css';
 import { useAuth0 } from '@auth0/auth0-react';
 
 function App() {
-  const {
-    loginWithRedirect,
-    isAuthenticated,
-    user,
-    logout,
-    getAccessTokenSilently,
-  } = useAuth0();
+  const { loginWithRedirect, isAuthenticated, logout, getAccessTokenSilently } =
+    useAuth0();
   const [loading, setIsLoading] = useState(true);
   const [countries, setCountries] = useState([]);
   const [page, setPage] = useState(1);
@@ -17,12 +12,9 @@ function App() {
     fetchCountries();
   }, []);
   async function fetchCountries() {
-    console.log(user);
     const accessToken = await getAccessTokenSilently({
-      audience: `${import.meta.env.VITE_AUTH0_DOMAIN}/api/v2/`,
-      scope: 'read:current_user',
+      audience: import.meta.env.VITE_SERVER_BASE_URL,
     });
-    console.log(accessToken);
     const res = await fetch(
       `${import.meta.env.VITE_SERVER_BASE_URL}/countries/?page=${page}`,
       {
