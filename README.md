@@ -1,8 +1,11 @@
-# React + Vite
+# React Vite App with Restcountries API and Auth0 Integration
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React Vite application that demonstrates how to fetch and display country data from the Restcountries API while integrating Auth0 for user authentication.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Fetch country data (name, population, languages, etc.) from the Restcountries API.
+- Allow users to log in and access protected routes using Auth0.
+- Display a list of countries and their details.
+- View country details and statistics.
+- Securely authenticate users with Auth0.
